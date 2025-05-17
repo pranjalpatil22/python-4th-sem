@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>All Passengers</h1>
+    <a href="{% url 'passenger_add' %}">Add Passenger</a>
+    <ul>
+        {% for passenger in passengers %}
+            <li>
+                {{ passenger }} 
+                [<a href="{% url 'passenger_edit' passenger.pk %}">Edit</a>] 
+                [<a href="{% url 'passenger_delete' passenger.pk %}">Delete</a>]
+            </li>
+        {% empty %}
+            <li>No passengers found.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

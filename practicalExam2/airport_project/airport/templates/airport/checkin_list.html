@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>All Check-Ins</h1>
+    <a href="{% url 'checkin_add' %}">New Check-In</a>
+    <ul>
+        {% for checkin in checkins %}
+            <li>
+                {{ checkin.passenger }} – Flight {{ checkin.flight.flight_number }} – Seat {{ checkin.seat_number }}
+                [<a href="{% url 'checkin_delete' checkin.pk %}">Delete</a>]
+            </li>
+        {% empty %}
+            <li>No check-ins available.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

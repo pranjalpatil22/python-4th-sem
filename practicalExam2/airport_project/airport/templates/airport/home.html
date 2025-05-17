@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to the Airport Management System</h1>
+    <ul>
+        <li><a href="{% url 'flight_list' %}">Manage Flights</a></li>
+        <li><a href="{% url 'passenger_list' %}">Manage Passengers</a></li>
+        <li><a href="{% url 'checkin_list' %}">Manage Check-Ins</a></li>
+    </ul>
+    <h1>
+        <p style="position: fixed; bottom: 10px;">Prepared by 23CE114</p>
+    </h1>
+    
+</body>
+</html>
