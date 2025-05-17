@@ -39,7 +39,7 @@ Welcome to the official repository for my **Python Programming** subject from th
 - Connecting Python with **SQLite** databases
 
 - **🧮 NumPy Basics** (arrays, operations, reshaping, slicing, etc.)
-- 
+  
 - **🌐 Web Development with Django**:
   - Django setup and project creation
   - URL routing, views, templates
